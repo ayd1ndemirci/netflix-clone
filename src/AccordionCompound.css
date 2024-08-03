@@ -1,0 +1,80 @@
+/* accordion */
+.accordion-inner {
+    max-width: 820px;
+    margin: 0.5rem auto;
+    padding: 4rem 0;
+  }
+  
+  .accordion-title {
+    margin-bottom: 3rem;
+  }
+  
+  .accordion {
+    background-color: #303030;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+    position: relative;
+    font-weight: 400;
+  }
+  
+  .accordion::after {
+    content: "+";
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    top: 5px;
+    right: 25px;
+  }
+  
+  .panel {
+    max-height: 0;
+    background-color: #303030;
+    overflow: hidden;
+    color: #fff;
+    margin: 1px 0 5px 0;
+    transition: max-height 0.4s;
+    letter-spacing: 1px;
+  }
+  
+  .question.active .panel {
+    max-height: 500px;
+    transition: max-height 0.4s;
+  }
+  
+  .question.active .accordion::after {
+    content: '-';
+  }
+  
+  .panel p {
+    padding: 1.2em;
+  }
+  
+  .form-container {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .form-container .form-title {
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
+  
+  .form-email-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+  }
+  
